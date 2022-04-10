@@ -1,0 +1,5 @@
+D:\Programming\Projects\VS_2019\Recognition\HikvisionLibrary\bin\Release\HikvisionLibrary.dll
+D:\Programming\Projects\VS_2019\Recognition\HikvisionLibrary\bin\Release\HikvisionLibrary.pdb
+D:\Programming\Projects\VS_2019\Recognition\HikvisionLibrary\obj\Release\HikvisionLibrary.dll
+D:\Programming\Projects\VS_2019\Recognition\HikvisionLibrary\obj\Release\HikvisionLibrary.pdb
+D:\Programming\Projects\VS_2019\Recognition\HikvisionLibrary\obj\Release\HikvisionLibrary.csproj.CoreCompileInputs.cache

@@ -1,0 +1,10 @@
+D:\Programming\Projects\VS_2019\Recognition\IntLabLibrary\bin\Debug\IntLabLibrary.dll
+D:\Programming\Projects\VS_2019\Recognition\IntLabLibrary\bin\Debug\IntLabLibrary.pdb
+D:\Programming\Projects\VS_2019\Recognition\IntLabLibrary\bin\Debug\Newtonsoft.Json.dll
+D:\Programming\Projects\VS_2019\Recognition\IntLabLibrary\bin\Debug\Newtonsoft.Json.xml
+D:\Programming\Projects\VS_2019\Recognition\IntLabLibrary\obj\Debug\IntLabLibrary.csproj.CopyComplete
+D:\Programming\Projects\VS_2019\Recognition\IntLabLibrary\obj\Debug\IntLabLibrary.dll
+D:\Programming\Projects\VS_2019\Recognition\IntLabLibrary\obj\Debug\IntLabLibrary.pdb
+D:\Programming\Projects\VS_2019\Recognition\IntLabLibrary\bin\Debug\IntLabLibrary.xml
+D:\Programming\Projects\VS_2019\Recognition\IntLabLibrary\obj\Debug\IntLabLibrary.csproj.CoreCompileInputs.cache
+D:\Programming\Projects\VS_2019\Recognition\IntLabLibrary\obj\Debug\IntLabLibrary.csproj.AssemblyReference.cache

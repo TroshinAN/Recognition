@@ -1,0 +1,1652 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IntLabLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:IntLabLibrary.AggregatorConfig">
+            <summary>
+            Настройки агрегатора.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.AggregatorConfig.Name">
+            <summary>
+            Наименование агрегатора.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.AggregatorConfig.LicenseType">
+            <summary>
+            Тип лицензии обработки входного потока изображений.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.AggregatorConfig.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.AggregatorConfig.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.AggregatorEvent">
+            <summary>
+            Событие, инициирующее выдачу результата распознавания.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.AggregatorEvent.EventType">
+            <summary>
+            Тип события синхронизации.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.AggregatorEvent.TimeSpec">
+            <summary>
+            Временная метка.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.AggregatorEvent.#ctor(IntLabLibrary.AggregatorEventType,IntLabLibrary.TimeSpec)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="eventType">Тип события синхронизации.</param>
+            <param name="timeSpec">Временная метка.</param>
+        </member>
+        <member name="M:IntLabLibrary.AggregatorEvent.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.AggregatorSetup">
+            <summary>
+            База знаний для агрегатора.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.AggregatorSetup.KnownNumbers">
+            <summary>
+            Список известных номеров.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.AggregatorSetup.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.AggregatorSetup.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.CameraIntrinsicSetup">
+            <summary>
+            Внутренние свойства камеры и объектива и условия при которых они были получены. Значения определяются с помощью процедуры калибровки описанной по ссылке.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.CameraIntrinsicSetup.FrameSize">
+            <summary>
+            Размер рамки изображения (разрешение), используемый при калибровке.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.CameraIntrinsicSetup.Camera">
+            <summary>
+            Внутренняя «матрица» камеры.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.CameraIntrinsicSetup.KoefRad1">
+            <summary>
+            Коэффициент радиальных искажений 1.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.CameraIntrinsicSetup.KoefRad2">
+            <summary>
+            Коэффициент радиальных искажений 2.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.CameraIntrinsicSetup.KoefRad3">
+            <summary>
+            Коэффициент радиальных искажений 3.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.CameraIntrinsicSetup.KoefRad4">
+            <summary>
+            Коэффициент радиальных искажений 4.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.CameraIntrinsicSetup.KoefRad5">
+            <summary>
+            Коэффициент радиальных искажений 5.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.CameraIntrinsicSetup.KoefRad6">
+            <summary>
+            Коэффициент радиальных искажений 6.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.CameraIntrinsicSetup.KoefTan1">
+            <summary>
+            Коэффициент тангенциальных искажений 1.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.CameraIntrinsicSetup.KoefTan2">
+            <summary>
+            Коэффициент тангенциальных искажений 2.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.CameraIntrinsicSetup.#ctor">
+            <summary>
+            Инициализирует новый экземплря класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.CameraIntrinsicSetup.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.CameraSetup">
+            <summary>
+            Внутренние (собственные) и внешние параметры камеры и ее объектива. Определяются с помощью процедуры калибровки.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.CameraSetup.FrameSize">
+            <summary>
+            Размеры кадра изображения (разрешение) используемые при калибровке.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.CameraSetup.Intrinsic">
+            <summary>
+            Свойства камеры.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.CameraSetup.CameraAnglesZyx">
+            <summary>
+            Углы Эйлера в порядке использования: Z-> Y-> X.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.CameraSetup.RefScaleType">
+             <summary>
+             поддерживаемые значения:
+            "roi_rect_rescaled_size_px" - произвести растягивание целого кадра или зоны tImageSourceDescriptor::roi_rect, 
+             если она установлена до размера ref_scale_size_x пикселей ширины и ref_scale_size_y пикселей высоты
+             </summary>
+        </member>
+        <member name="P:IntLabLibrary.CameraSetup.RefScaleSizeX">
+            <summary>
+            Размер масштабного шаблона по оси Х.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.CameraSetup.RefScaleSizeY">
+            <summary>
+            Размер масштабного шаблона по оси У.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.CameraSetup.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.CameraSetup.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.ExportResult">
+            <summary>
+            Таблица экспорта результатов.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ExportResult.Results">
+            <summary>
+            Финальный консолидированный на базе всех источников изображений.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ExportResult.ImageSources">
+            <summary>
+            Результаты индивидуально по источникам изображений.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ExportResult.Feedbacks">
+            <summary>
+            Обратная связь от библиотеки распознавания.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ExportResult.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ExportResult.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.Result">
+            <summary>
+            Консолидированный результат распознавания по всем источникам изображений.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.Result.ObjectUid">
+            <summary>
+            Идентификатор отслеживаемого объекта (-1 объект без сопровождения).
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.Result.Reason">
+            <summary>
+            Основание по которому был создан консолидированный результат.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.Result.Confidence">
+            <summary>
+            Достоверность результата распознавания номера (0.f - 1.f).
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.Result.Number">
+            <summary>
+            Строка распознанного номера.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.Result.ColorPolarity">
+            <summary>
+            Цвет номерной пластины и текста.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.Result.TypeOfNumber">
+            <summary>
+            Тип распознанного номера.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.Result.Direction">
+            <summary>
+            Направление и скорость движения объекта.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.Result.TimeIn">
+            <summary>
+            Отметка времени входа объекта в зону контроля.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.Result.TimeOut">
+            <summary>
+            Отметка времени выхода объекта в зону контроля.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.Result.CharConfidence">
+            <summary>
+            Достоверность распознавания символов номера.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.Result.Similarity">
+            <summary>
+            Сходство с эталоном из списка.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.Result.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.Result.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.EngineFeedback">
+            <summary>
+            Вербальный отчет о проблемах распознавания и возможных способах их устранения.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.EngineFeedback.Message">
+            <summary>
+            Отчет о проблемах распознавания и возможных способах их устранения.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.EngineFeedback.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.EngineFeedback.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.ErrorReport">
+            <summary>
+            Подробный отчет о последней ошибке.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReport.ObjectName">
+            <summary>
+            Пользовательское имя объекта.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReport.Source">
+            <summary>
+            Последняя вызванная функция.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReport.ErrorReason">
+            <summary>
+            Причина ошибки в виде значения кода ошибки .
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReport.ErrorMessage">
+            <summary>
+            Дополнительное объяснение.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReport.ErrorCode">
+            <summary>
+            Код ошибки.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReport.ErrorCategory">
+            <summary>
+            Категория ошибки (IRE, система, общая).
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReport.ErrorUtcTime">
+            <summary>
+            Категория ошибки (IRE, система, общая).
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReport.ObjectHandle">
+            <summary>
+            Дескриптор объекта.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReport.ErrorLocation">
+            <summary>
+            Положение источника ошибки по результатам отладки.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReport.ObjectState">
+            <summary>
+            Внутренне состояние объекта.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReport.ObjectThreadSafe">
+            <summary>
+            Является ли интерфейс по отношению к объекту потокобезопасным.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReport.ObjectNumberId">
+            <summary>
+            Внутренний численный идентификатор.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReport.TotalCallCounter">
+            <summary>
+            Счетчик общего числа вызовов.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReport.ObjectThreadingFailures">
+            <summary>
+            Счетчик ошибок многопоточности, обнаруженных IRE.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReport.ObjectInternalFailures">
+            <summary>
+            Счетчик внутренних критических отказов, обнаруженных IRE.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ErrorReport.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ErrorReport.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.ErrorReportList">
+            <summary>
+            Список ошибок.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReportList.Errors">
+            <summary>
+            Список ошибок.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReportList.BuildInfo">
+            <summary>
+            Информация о библиотеке (дата создания, версия и т.д.).
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReportList.PathToBinary">
+            <summary>
+            Путь к бинарному образу загруженной библиотеки.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ErrorReportList.PathToStorage">
+            <summary>
+            Путь к файлу хранилища.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ErrorReportList.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ErrorReportList.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.EulerAngles">
+            <summary>
+            Углы Эйлера описывающие наклон камеры по отношению к плоскости наилучшего ракурса объекта для распознавания. Повороты производятся в следующей последовательности по осям: Z->Y->X.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.EulerAngles.X">
+            <summary>
+            Угол поворота (в градусах) вокруг горизонтальной оси X, диапазон значений от -45 до 45 градусов, рекомендуется от -15 до 15
+            положительный угол - вращение по часовой стрелке относительно оси, отрицательный угол - вращение против часовой стрелки.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.EulerAngles.Y">
+            <summary>
+            Угол поворота (в градусах) вокруг вертикальной оси Y, диапазон значений от -45 до 45 градусов, рекомендуется от -15 до 15
+            положительный угол - вращение по часовой стрелке относительно оси, отрицательный угол - вращение против часовой стрелки.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.EulerAngles.Z">
+            <summary>
+            Угол поворота (в градусах) вокруг оси Z, диапазон значений от -45 до 45 градусов, рекомендуется от -10 до 10
+            положительный угол - вращение по часовой стрелке относительно оси, отрицательный угол - вращение против часовой стрелки.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.EulerAngles.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.FrameRectangle">
+            <summary>
+            Прямоугольник задающий размер кадра или области в пикселях в виде координат левого верхнего угла и размера по ширине и высоте.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.FrameRectangle.X">
+            <summary>
+            Х-координата левого верхнего угла области.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.FrameRectangle.Y">
+            <summary>
+            Y-координата левого верхнего угла области.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.FrameRectangle.Width">
+            <summary>
+            Ширина области.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.FrameRectangle.Height">
+            <summary>
+            Высота области.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.FrameRectangle.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.FrameSize">
+            <summary>
+            Ширина и высота кадра в пикселях.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.FrameSize.MaxPixcel">
+            <summary>
+            Максимально допустимый размер в пикселях.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.FrameSize.Width">
+            <summary>
+            Ширина кадра в пикселях.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.FrameSize.Height">
+            <summary>
+            Высота кадра в пикселях.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.FrameSize.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.DllHandle">
+            <summary>
+            Экземпляр дескриптора объекта.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.DllHandle.HandleZero">
+            <summary>
+            Пустой дескриптор.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.DllHandle.LibraryType">
+            <summary>
+            Тип библиотеки.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.DllHandle.Handle">
+            <summary>
+            Дескриптор.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.DllHandle.Parent">
+            <summary>
+            Экземпляр родительского дескриптора
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.DllHandle.#ctor(IntLabLibrary.LibraryType,System.Int64,IntLabLibrary.DllHandle)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="libraryType">Тип библиотеки.</param>
+            <param name="handle">Дескриптор объекта.</param>
+            <param name="parent">Экземпляр родительского дескриптора.</param>
+        </member>
+        <member name="M:IntLabLibrary.DllHandle.#ctor(IntLabLibrary.LibraryType)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="type">Тип библиотеки.</param>
+        </member>
+        <member name="M:IntLabLibrary.DllHandle.ToString">
+            <summary>
+            Строковое представление экземпляра дескриптора.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:IntLabLibrary.ImageDataFrame">
+            <summary>
+            Кадр изображения со временной меткой
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageDataFrame.TimeSpec">
+            <summary>
+            Временная метка кадра.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageDataFrame.Image">
+            <summary>
+            Изображение в виде последовательности байт в кодировке base64.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ImageDataFrame.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ImageDataFrame.#ctor(System.Byte[])">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+            <param name="image">Массив байт изображения.</param>
+        </member>
+        <member name="M:IntLabLibrary.ImageDataFrame.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.ImageSourceConfig">
+            <summary>
+            Настройки источника данных.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceConfig.ImageSourceUid">
+            <summary>
+            Имя источника изображений, обязательный параметр (может быть равен "")
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceConfig.ImageSourceSetup">
+            <summary>
+            Формат входных данных, параметры предварительной обработки изображения.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceConfig.RecognitionSetup">
+            <summary>
+            Параметры распознавателя.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ImageSourceConfig.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ImageSourceConfig.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.ImageSourceDescriptor">
+            <summary>
+            Описатель источника изображений для распознавания.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceDescriptor.FrameFormat">
+            <summary>
+            Ожидаемый формат кадра.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceDescriptor.FrameSize">
+            <summary>
+            Размер кадра ширина+высота в пикселях.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceDescriptor.RoiRect">
+            <summary>
+            Координаты угла (х,у) и размер (w,h) области внимания в пикселях .
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceDescriptor.CameraSetup">
+            <summary>
+            Свойства камеры.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ImageSourceDescriptor.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ImageSourceDescriptor.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.ImageSourceResult">
+            <summary>
+            Результат распознавания по источнику изображения.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceResult.ObjectUid">
+            <summary>
+            Идентификатор отслеживаемого объекта (-1 объект без сопровождения).
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceResult.ImageSourceName">
+            <summary>
+            Имя источника изображений.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceResult.Confidence">
+            <summary>
+            Достоверность результата распознавания номера (0.f - 1.f).
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceResult.Number">
+            <summary>
+            Строка распознанного номера.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceResult.CharConfidence">
+            <summary>
+            Достоверность распознавания символов номера.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceResult.ColorPolarity">
+            <summary>
+            Цвет номерной пластины и текста.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceResult.TypeOfNumber">
+            <summary>
+            Тип распознанного номера.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceResult.Direction">
+            <summary>
+            Направление и скорость движения объекта.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceResult.BestViewTime">
+            <summary>
+            Отметка времени кадра, на котором наиболее хорошо виден номерной знак.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceResult.BestViewBox">
+            <summary>
+            Область внутри кадра в момент времени BestViewTime.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceResult.TimeIn">
+            <summary>
+            Отметка времени входа объекта в зону контроля.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceResult.TimeOut">
+            <summary>
+            Отметка времени выхода объекта в зону контроля.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ImageSourceResult.RecognizedNumberCount">
+            <summary>
+            Количество кадров в которых был распознан номер.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ImageSourceResult.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ImageSourceResult.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.IntrinsicCameraMatrix">
+            <summary>
+            Описатель внутренних (собственных) параметров камеры и ее объектива.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.IntrinsicCameraMatrix.Fx">
+            <summary>
+            Безразмерное фокусное расстояние камеры в пикселях по оси Х: focal_length[mm] * pixel_density [pixels/mm]
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.IntrinsicCameraMatrix.Fy">
+            <summary>
+            Безразмерное фокусное расстояние камеры в пикселях по оси У: focal_length[mm] * pixel_density [pixels/mm]
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.IntrinsicCameraMatrix.Cx">
+            <summary>
+            Расположение оптического центра в пикселях по оси Х. Обычно близко или равно (frame_size.w / 2; frame_size.h / 2)
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.IntrinsicCameraMatrix.Cy">
+            <summary>
+            Расположение оптического центра в пикселях по оси У. Обычно близко или равно (frame_size.w / 2; frame_size.h / 2)
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.IntrinsicCameraMatrix.Fisheye">
+            <summary>
+            Модель камеры: true - сверхширокоугольная (fish-eye), false - не сверхширокоугольная
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.IntrinsicCameraMatrix.FovAlpha">
+            <summary>
+            Коэффициент масштабирования поля зрения (0, 1,0]. Если ноль (по умолчанию), то будет игнорироваться. Позволяет производить эффект "zoom out".
+            Может использоваться когда при коррекции оптических искажений происходит обрезка зон краев изображения.
+            При значении fov_alpha = 0.0 присутствуют только пиксели прямоугольника скорректированного изображения (идет обрезка зон "подушки" относительно прямоугольника).
+            При значении fov_alpha = 1.0 все пиксели исходного изображения после коррекции искажений объектива будут сохранены.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.IntrinsicCameraMatrix.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.IntrinsicCameraMatrix.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.LibraryConfig">
+            <summary>
+            Настройки уровня библиотеки.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.LibraryConfig.Directory">
+            <summary>
+            Полный путь до файла хранилища.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.LibraryConfig.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.LibraryConfig.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.ObjectBox">
+            <summary>
+            Область локализации объекта (bounding box).
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ObjectBox.LeftX">
+            <summary>
+            Х-координата левого верхнего угла области.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ObjectBox.TopY">
+            <summary>
+            Y-координата левого верхнего угла области.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ObjectBox.RightX">
+            <summary>
+            Х-координата правого нижнего угла области.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ObjectBox.BottomY">
+            <summary>
+            Y-координата правого нижнего угла области.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ObjectBox.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.ObjectMovement">
+            <summary>
+            Запись о перемещении объекта.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ObjectMovement.VelocityUnit">
+            <summary>
+            Размерность значения скорости.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ObjectMovement.Velocity">
+            <summary>
+            Скорость.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.ObjectMovement.Direction">
+            <summary>
+            Направление относительно наблюдателя.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ObjectMovement.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ObjectMovement.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.ObjectToJson">
+            <summary>
+            Класс работы с Json строками.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.ObjectToJson.ToJson``1(``0)">
+            <summary>
+            Преобразование объекта в Json строку.
+            </summary>
+            <typeparam name="T">Тип объекта.</typeparam>
+            <param name="object">Объект.</param>
+            <returns>Json строка.</returns>
+        </member>
+        <member name="M:IntLabLibrary.ObjectToJson.ToObject``1(System.String)">
+            <summary>
+            Преобразование Json строки в объект.
+            </summary>
+            <typeparam name="T">Тип объекта.</typeparam>
+            <param name="value">Json строка.</param>
+            <returns>Объект указанного типа.</returns>
+        </member>
+        <member name="T:IntLabLibrary.Recognition">
+            <summary>
+            Базовый класс библиотеки.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.Recognition.StopByError">
+            <summary>
+            Метод передачи сообщения о критической ошибке.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.Recognition.LibraryType">
+            <summary>
+            Тип библиотеки.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.CreateInterface(IntLabLibrary.LibraryType)">
+            <summary>
+            Получает рабочий экземпляр библиотеки.
+            </summary>
+            <param name="engine">Тип получаемого экземпляра.</param>
+            <returns>Рабочий экземпляр библиотеки.</returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.#ctor(IntLabLibrary.LibraryType)">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.ToString">
+            <summary>
+            Строковое представление типа библиотеки.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.LibraryInit(IntLabLibrary.LibraryConfig,System.String)">
+            <summary>
+            Инициализирует библиотеку.
+            </summary>
+            <param name="libraryConfig">Конфигурация библиотеки.</param>>
+            <param name="options">Строка дополнительных параметров.</param>
+            <returns>Указывает, удачно ли завершилась инициализация библиотеки.</returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.LibraryFree(System.Boolean)">
+            <summary>
+            Освобождает ресурсы библиотеки и отключает защитный ключ.
+            Должен вызываться только после закрытия всех ранее созданных объектов.
+            </summary>
+            <param name="useThrow">Вызывать ли исключение при неудачном освобождении ресурсов библиотеки. По умолчанию вызывать.</param>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.CreateAggregator(IntLabLibrary.AggregatorConfig,System.String)">
+            <summary>
+            Создаёт экземпляр агрегатора.
+            </summary>
+            <param name="config">Параметра агрегатора.</param>
+            <param name="option">Строка дополнительных параметров.</param>
+            <returns>Возвращает экземпляр агрегатора.</returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.AddImageSource(IntLabLibrary.DllHandle,IntLabLibrary.ImageSourceConfig,System.String)">
+            <summary>
+            Создаёт экземпляр ресурса изображения для указанного агрегатора.
+            </summary>
+            <param name="aggregator">Экземпляр агрегатора.</param>
+            <param name="config">Параметры ресурса изображения.</param>
+            <param name="option">Строка дополнительных параметров.</param>
+            <returns>Возвращает экземпляр ресурса изображения.</returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.ReleaseAggregator(IntLabLibrary.DllHandle)">
+            <summary>
+            Освобождение ресурсов агрегатора
+            </summary>
+            <param name="aggregator">Экземпляр агрегатора.</param>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.Setup(IntLabLibrary.DllHandle,IntLabLibrary.AggregatorSetup,System.String)">
+            <summary>
+            Установка алгоритмов распознавания.
+            </summary>
+            <param name="aggregator">Экземпляр агрегатора</param>
+            <param name="aggregatorSetup">Настройки алгоритма распознавания.</param>
+            <param name="option">Строка дополнительных параметров.</param>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.Reset(IntLabLibrary.DllHandle,System.String)">
+            <summary>
+            Сброс алгоритмов распознавания.
+            </summary>
+            <param name="aggregator">Экземпляр агрегатора</param>
+            <param name="option">Строка дополнительных параметров.</param>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.Process(IntLabLibrary.DllHandle,System.String,System.String)">
+            <summary>
+            Для агрегатора запускается процесс обработки событий агрегатора.
+            Для ресурса изображения запускается обработка изображения.
+            </summary>
+            <param name="handle">Экземпляр объекта, для которого запускается процесс (агрегатор/ресурс изображения)</param>
+            <param name="data">Json-строка с данными для обработки.</param>
+            <param name="option">Строка дополнительных параметров.</param>
+            <returns>Указывает, удачно ли завершилась обработка.</returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.GetResult(IntLabLibrary.DllHandle,System.String)">
+            <summary>
+            Получение результата распознавания.
+            </summary>
+            <param name="handle">Экземпляр агрегатора.</param>
+            <param name="option">Строка дополнительных параметров.</param>
+            <returns>Возвращает полученный результат в формате Json-строки.</returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.GetLastError(IntLabLibrary.DllHandle,System.String)">
+            <summary>
+            Получить Json-строки последней ошибки.
+            </summary>
+            <param name="handle">Дескриптор объекта, для получения последней ошибки. Если значение null - последняя ошибки библиотеки.</param>
+            <param name="option">Строка дополнительных параметров.</param>
+            <returns>Возвращает Json-строку последней ошибки объекта.</returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.ReadFromInstance(System.Int32,System.String@,IntLabLibrary.DllHandle,IntLabLibrary.Recognition.ReadFuncTemplate,System.String)">
+            <summary>
+            Чтение Json-строки из объекта.
+            </summary>
+            <param name="tryCount">Количество попыток чтения.</param>
+            <param name="text">Json-строка, считанная из объекта.</param>
+            <param name="handle">Экземпляр объекта.</param>
+            <param name="func">Экземпляр функции чтения из библиотеки.</param>
+            <param name="option">Строка дополнительных параметров.</param>
+            <returns>Возвращает код возврата функции библиотеки.</returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.DotStringAsCString(System.String)">
+            <summary>
+            Преобразует строку в массив символов UTF-8 с завершающим нулём.
+            </summary>
+            <param name="str">Строка для преобразования.</param>
+            <returns>Возвращает массив символов в кодировке UTF-8 c завершающим нулём.</returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.CStrSize(System.Byte[])">
+            <summary>
+            Возвращает размер массива.
+            </summary>
+            <param name="b">Массив.</param>
+            <returns>Размер массива.</returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.DLL_LibraryInit(System.Byte[],System.UInt32,System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="lib_config"></param>
+            <param name="config_size"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.DLL_LibraryFree">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.DLL_CreateAggregator(System.Byte[],System.UInt32,System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="inst_config"></param>
+            <param name="config_size"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.DLL_ReleaseAggregator(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="aggregator_obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.DLL_AddImageSource(System.Int64,System.Byte[],System.UInt32,System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="aggregator_obj"></param>
+            <param name="inst_config"></param>
+            <param name="config_size"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.DLL_Setup(System.Int64,System.Byte[],System.UInt32,System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="aggregator_obj"></param>
+            <param name="input_data"></param>
+            <param name="data_size"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.DLL_Reset(System.Int64,System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="aggregator_obj"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.DLL_Process(System.Int64,System.Byte[],System.UInt32,System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="input_data"></param>
+            <param name="data_size"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.DLL_GetResult(System.Int64,System.Byte[],System.UInt32,System.UInt32@,System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="data_output"></param>
+            <param name="data_size"></param>
+            <param name="data_written"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IntLabLibrary.Recognition.DLL_GetLastError(System.Int64,System.Byte[],System.UInt32,System.UInt32@,System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="data_output"></param>
+            <param name="data_size"></param>
+            <param name="data_written"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IntLabLibrary.LibraryType">
+            <summary>
+            Тип библиотеки.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.LibraryType.INVALID">
+            <summary>
+            Не определён.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.LibraryType.COACH">
+            <summary>
+            Пассажирский вагон.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.LibraryType.CONTAINER">
+            <summary>
+            Грузовой контейнер.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.LibraryType.UIC">
+            <summary>
+            Многострочный номер вагона.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.LibraryType.WAGON">
+            <summary>
+            Однострочный номер вагона.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.LibraryType.AUTO_LPR">
+            <summary>
+            Номерной знак автотранспорта.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.LibraryType.AUTO_MMR">
+            <summary>
+            Категория, марка , модель автотранспорта.
+            </summary>
+        </member>
+        <member name="T:IntLabLibrary.LicenseType">
+            <summary>
+            Тип лицензии обработки входного потока изображений.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.LicenseType.UNKNOW">
+            <summary>
+            Не определено.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.LicenseType.IMAGE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.LicenseType.VIDEO">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:IntLabLibrary.ImageFormat">
+            <summary>
+            Формат изображения.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ImageFormat.UNKNOW">
+            <summary>
+            Не определено.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ImageFormat.JPG">
+            <summary>
+            JPG изображение.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ImageFormat.RAW_GRAY">
+            <summary>
+            Растровое изображение.
+            </summary>
+        </member>
+        <member name="T:IntLabLibrary.AggregatorEventType">
+            <summary>
+            Тип события синхронизации.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.AggregatorEventType.UNKNOWN">
+            <summary>
+            Не определено.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.AggregatorEventType.OBJECT_STARTING_POINT">
+            <summary>
+            Начальная точка отсчета по целевому объекту распознавания, может быть перезаписана.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.AggregatorEventType.OBJECT_ENDING_POINT">
+            <summary>
+            Конечная точка отсчета по целевому объекту распознавания, по мере готовности выдается консолидированный результат в GetResult с eResultReason::ObjectEndingPoint
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.AggregatorEventType.SEGMENT_STARTING_POINT">
+            <summary>
+            Начальная точка отсчета для формирования консолидированного результата распознавания по отрезку времени, может быть перезаписана.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.AggregatorEventType.SEGMENT_ENDING_POINT">
+            <summary>
+            Конечная точка отсчета для формирования консолидированного результата распознавания по отрезку времени, по факту готовности выдается консолидированный результат в GetResult с eResultReason::SegmentEndingPoint
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.AggregatorEventType.INTERMEDIATE_RESULT_REQUEST">
+            <summary>
+            Запрос на получение в GetResult промежуточного консолидированного результата (тяжелая операция, не рекомендуется вызывать часто, для оптимального использования рекомендуется использовать
+            IntermediateConfidentResultRequest). Ответ на запрос возвращается в GetResult по факту его готовности с соответствующим значением eResultReason::IntermediateResultRequest.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.AggregatorEventType.INTERMEDIATE_CONFIDENT_RESULT_REQUEST">
+            <summary>
+            Запрос на получение в GetResult первого надежного промежуточного результата. Ответ на запрос возвращается в GetResult по факту его готовности с соответствующим значением 
+            eResultReason::IntermediateConfidentResultRequest.
+            </summary>
+        </member>
+        <member name="T:IntLabLibrary.ColorPolarity">
+            <summary>
+            Черно-белый цвет для символов.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ColorPolarity.UNKNOWN">
+            <summary>
+            Не определено.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ColorPolarity.BLACK_ON_WHITE">
+            <summary>
+            Темные символы на светлом фоне.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ColorPolarity.WHITE_ON_BLACK">
+            <summary>
+            Светлые символы на темном фоне.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ColorPolarity.COMBINED">
+            <summary>
+            Комбинация вышеперечисленных вариантов.
+            </summary>
+        </member>
+        <member name="T:IntLabLibrary.RecognizedType">
+            <summary>
+            Тип распознанного номера.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.RecognizedType.UNKNOWN">
+            <summary>
+            Не определено.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.RecognizedType.FULL_RECOGNIZED">
+            <summary>
+            Номер обнаружен и полностью распознан, распознанный номер удовлетворяет контрольному алгоритму
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.RecognizedType.FULL_RECOGNISED_CHECK_SUM_FAILED">
+            <summary>
+            Номер найден и полностью распознан, но результат распознавания не удовлетворяет контрольному алгоритму.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.RecognizedType.PARTIAL_RECOGNIZED_ESTIMATED">
+            <summary>
+            Номер распознан не полностью, но при этом найдено или эвристически вычислено положение всех символов (например, 5xx98301,5*x98301).
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.RecognizedType.PARTIAL_RECOGNIZED">
+            <summary>
+            Распознано, найдено и эвристически вычислено только часть номера (например, 5019x).
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.RecognizedType.FULL_UNRECOGNIZED">
+            <summary>
+            Номер не обнаружен.
+            </summary>
+        </member>
+        <member name="T:IntLabLibrary.VelocityUnit">
+            <summary>
+            Размерность для скорости объекта.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.VelocityUnit.UNKNOWN">
+            <summary>
+            Направление движения не определено.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.VelocityUnit.METERS_PER_SECOND">
+            <summary>
+            Скорость имеет размерность [метры за секунду].
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.VelocityUnit.PIXELS_PER_SECOND">
+            <summary>
+            Скорость имеет размерность [пиксели за секунду].
+            </summary>
+        </member>
+        <member name="T:IntLabLibrary.MoveDirection">
+            <summary>
+            Направление движения объекта.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.MoveDirection.UNKNOWN">
+            <summary>
+            Направление движения не определено.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.MoveDirection.UP">
+            <summary>
+            Движение вверх.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.MoveDirection.DOWN">
+            <summary>
+            Движение вниз.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.MoveDirection.LEFT">
+            <summary>
+            Движение влево.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.MoveDirection.RIGHT">
+            <summary>
+            Движение вправо.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.MoveDirection.TOWARDS">
+            <summary>
+            Движение на камеру.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.MoveDirection.BACKWARD">
+            <summary>
+            Движение от камеры.
+            </summary>
+        </member>
+        <member name="T:IntLabLibrary.ResultReason">
+            <summary>
+            Основание выдачи результата распознавания.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ResultReason.UNKNOWN">
+            <summary>
+            Не определено.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ResultReason.OBJECT_STOPPED">
+            <summary>
+            Объект остановился в поле зрения камеры.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ResultReason.OBJECT_RUN_OUT_OF_FRAME">
+            <summary>
+            Объект покинул поле зрения камеры.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ResultReason.OBJECT_TIME_OUT">
+            <summary>
+            Объект не был обнаружен в течении установленного тайм-аута.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ResultReason.FRAME_ROUGH_REC">
+            <summary>
+            Real-time результат распознавания по кадру без глубокой аналитики.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ResultReason.FRAME_FINE_REC">
+            <summary>
+            Максимально качественный, но более медленный в получении результат распознавания по кадру.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ResultReason.OBJECT_ENDING_POINT">
+            <summary>
+            Консолидированный результат распознавания по объекту по факту выхода объекта из зоны контроля.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ResultReason.SEGMENT_ENDING_POINT">
+            <summary>
+            Запрос из вызывающего кода на выдачу промежуточного результата по факту окончания интервала распознавания
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ResultReason.INTERMEDIATE_RESULT_REQUEST">
+            <summary>
+            Консолидированный результат распознавания по объекту сформированный ASAP по запросу из вызывающего кода.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ResultReason.INTERMEDIATE_CONFIDENT_RESULT_REQUEST">
+            <summary>
+            Консолидированный результат распознавания по объекту сформированный по факту получения надежного результата распознавания по объекту.
+            </summary>
+        </member>
+        <member name="T:IntLabLibrary.SimilarityType">
+            <summary>
+            Тип совпадения распознанного номера списку номеров из базы знаний агрегатора.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.SimilarityType.UNKNOWN">
+            <summary>
+            Не определено.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.SimilarityType.NUMBER_NOT_FOUND">
+            <summary>
+            Ни один похожий номер в списке не найден.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.SimilarityType.NUMBER_FOUND_EQUAL">
+            <summary>
+            В списке найден номер полностью совпадающий с распознанным.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.SimilarityType.NUMBER_FOUND_SIMILAR">
+            <summary>
+            В списке найден один наиболее похожий номер, остальные номера отличаются больше.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.SimilarityType.NUMBER_FOUND_AMBIGUOUS">
+            <summary>
+            В списке найдено несколько номеров, равноудалённых от распознанного,
+            возвращается в комбинации с флагом NumberNotFound, результат при этом не формируется.
+            </summary>
+        </member>
+        <member name="T:IntLabLibrary.ReturnCode">
+            <summary>
+            Код ошибки.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ReturnCode.DONE">
+            <summary>
+            Функция выполнена успешно.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ReturnCode.INSUFFICIENT_MEMORY">
+            <summary>
+            Недостаточно памяти для сохранения результата чтения данных из библиотеки IRE_XYZ.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ReturnCode.FRAME_SKIPPED">
+            <summary>
+            Кадр был пропущен без обработки.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ReturnCode.INVALID_STATE">
+            <summary>
+            Недопустимый вызов объекта. Возможно нарушена последовательность вызовов, или объект не инициализирован должным образом.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ReturnCode.INVALID_HANDLE">
+            <summary>
+            Попытка доступа к несуществующему объекту. Ошибка подобного рода может привести к тяжелым последствиям.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ReturnCode.INVALID_INPUT_ARGUMENT">
+            <summary>
+            Входные данные заданны с ошибкой, например: отсутствуют обязательные поля структур или таблиц, тип полей несовместимы, вместо ожидаемого числа введена строка или же входные данные выходят за границы ожидаемых диапазонов.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ReturnCode.INCOMPATIBLE_DATA_TYPE">
+            <summary>
+            Входные данные имеют несовместимый тип и процедура разбора входных данных завершилась с ошибкой.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ReturnCode.CORRUPTED_DATA">
+            <summary>
+            Входные данные имеют нарушения на бинарном уровне или несовместимы с алгоритмом обработки, например нарушена контрольная суммы или ошибка в заголовке графического файла.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ReturnCode.DONGLE_NOT_FOUND">
+            <summary>
+            Проблемы с подключением к USB ключу.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ReturnCode.FATAL">
+            <summary>
+            Обнаружено логически противоречивое внутренне состояния внутри библиотеки IRE_XYZ.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ReturnCode.PANIC">
+            <summary>
+            Критические ошибки, причина которых не может быть ясно установлена. Возникает при обнаружении утечки исключений за границы исполняемого кода, 
+            а так же при ошибках на границе внешнего интерфейса IRE_XYZ, где система перехвата ошибок не действует.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ReturnCode.THEAD_VIOLATION">
+            <summary>
+            Обнаружено нарушение условий многопоточного исполнения со стороны пользователя. Библиотеки IRE_XYZ не поддерживают многопоточное обращения к методам экземпляра с одним и тем же идентификатором handle. 
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ReturnCode.FATAL_DEFERRED">
+            <summary>
+            То же, что ire_rc_thread_violation, но проблема много-поточного исполнения обнаружена после фактического нарушения.
+            </summary>
+        </member>
+        <member name="F:IntLabLibrary.ReturnCode.LICENSE_VIOLATION">
+            <summary>
+            Нарушены условия лицензионного соглашения для лицензий данного типа.
+            </summary>
+        </member>
+        <member name="T:IntLabLibrary.RecognitionSetup">
+            <summary>
+            Параметры распознавателя.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.RecognitionSetup.TypicalCharAr">
+            <summary>
+            Наиболее встречающееся усредненное соотношение ширина / высота для символов номера (исключая 1, I, J),
+            AR = W / H.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.RecognitionSetup.TypicalCharHeightSize">
+            <summary>
+            Наиболее встречающаяся усредненная высота символов в пикселях в масштабе исходного кадра.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.RecognitionSetup.MinCharWidth">
+            <summary>
+            Минимальная ширина символов в пикселях в масштабе исходного кадра.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.RecognitionSetup.MaxCharWidth">
+            <summary>
+            Максимальная ширина символов в пикселях в масштабе исходного кадра.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.RecognitionSetup.MinCharHeight">
+            <summary>
+            Минимальная высота символов в пикселях в масштабе исходного кадра.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.RecognitionSetup.MaxCharHeight">
+            <summary>
+            Максимальная высота символов в пикселях в масштабе исходного кадра.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.RecognitionSetup.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.RecognitionSetup.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.Similarity">
+            <summary>
+            Описатель сходства распознанного номера с номером из базы знаний агрегатора.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.Similarity.Number">
+            <summary>
+            Строка номера из списка, наиболее похожего на распознанный номер.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.Similarity.CharDistance">
+            <summary>
+            Количество отличающихся символов.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.Similarity.LevensteinDistance">
+            <summary>
+            Levenstein расстояние от распознанного номера до номера из списка номеров из базы знаний агрегатора.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.Similarity.Type">
+            <summary>
+            Тип совпадения.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.Similarity.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.Similarity.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+        <member name="T:IntLabLibrary.TimeSpec">
+            <summary>
+            Описатель времени POSIX.
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.TimeSpec.Seconds">
+            <summary>
+            Число секунд, истекших от 00:00 1 января 1970 UTC до времени POSIX
+            </summary>
+        </member>
+        <member name="P:IntLabLibrary.TimeSpec.NanSeconds">
+            <summary>
+            Количество наносекунд, округленное с учетом точности системных часов (1с= 1 000 000 000 нс).
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.TimeSpec.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса.
+            </summary>
+        </member>
+        <member name="M:IntLabLibrary.TimeSpec.ToJson">
+            <summary>
+            Получить Json строку элемента.
+            </summary>
+            <returns>Json строка</returns>
+        </member>
+    </members>
+</doc>

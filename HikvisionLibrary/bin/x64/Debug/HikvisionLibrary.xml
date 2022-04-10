@@ -1,0 +1,536 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HikvisionLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:HikvisionLibrary.BaseDll">
+            <summary>
+            Базовый класс с функциями для работы с библиотеками Hikvision.
+            </summary>
+        </member>
+        <member name="M:HikvisionLibrary.BaseDll.NET_DVR_Init">
+            <summary>
+            Инициализация библиотеки.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HikvisionLibrary.BaseDll.NET_DVR_Cleanup">
+            <summary>
+            Отключение от библиотеки.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HikvisionLibrary.BaseDll.NET_DVR_Login_V30(System.String,System.Int32,System.String,System.String,HikvisionLibrary.DeviceInfo@)">
+            <summary>
+            Вход пользователя для устройства.
+            </summary>
+            <param name="sDVRIP">IP-адрес или статическое доменное имя устройства, количество символов должно быть не более 128.</param>
+            <param name="wDVRPort">Порт №. устройства.</param>
+            <param name="sUserName">Имя пользователя.</param>
+            <param name="sPassword">Пароль.</param>
+            <param name="lpDeviceInfo">Информация об устройстве.</param>
+            <returns>Возвращает -1, если вход не удался, а другое значение - это значение возвращенного идентификатора пользователя. 
+            Идентификатор пользователя является уникальным, и следующие операции должны осуществляться через этот идентификатор.</returns>
+        </member>
+        <member name="M:HikvisionLibrary.BaseDll.NET_DVR_GetLastError">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HikvisionLibrary.BaseDll.NET_DVR_Logout(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="iUserID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HikvisionLibrary.BaseDll.NET_DVR_RealPlay_V40(System.Int32,HikvisionLibrary.PreviewInfo@,HikvisionLibrary.HikvisionCamera.REALDATACALLBACK,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="iUserID"></param>
+            <param name="lpPreviewInfo"></param>
+            <param name="fRealDataCallBack_V30"></param>
+            <param name="pUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HikvisionLibrary.BaseDll.NET_DVR_StopRealPlay(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="iRealHandle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HikvisionLibrary.BaseDll.NET_DVR_CapturePicture(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="lRealHandle"></param>
+            <param name="sPicFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HikvisionLibrary.BaseDll.NET_DVR_CaptureJPEGPicture(System.Int32,System.Int32,HikvisionLibrary.JpegParameters@,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="lUserID"></param>
+            <param name="lChannel"></param>
+            <param name="lpJpegPara"></param>
+            <param name="sPicFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HikvisionLibrary.BaseDll.NET_DVR_MakeKeyFrame(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="lUserID"></param>
+            <param name="lChannel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HikvisionLibrary.BaseDll.NET_DVR_MakeKeyFrameSub(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="lUserID"></param>
+            <param name="lChannel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HikvisionLibrary.BaseDll.NET_DVR_SaveRealData(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="lRealHandle"></param>
+            <param name="sFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HikvisionLibrary.Constants">
+            <summary>
+            Константы
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.Constants.SERIALNO_LEN">
+            <summary>
+            Максимальная длина серийного номера структуры DeviceInfo
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.Constants.STREAM_ID_LEN">
+            <summary>
+            Максимальная длина идентификатора потока для структуры PreviewInfo.
+            </summary>
+        </member>
+        <member name="T:HikvisionLibrary.DeviceInfo">
+            <summary>
+            Структура параметров устройства.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.sSerialNumber">
+            <summary>
+            Серийный номер.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byAlarmInPortNum">
+            <summary>
+            Количество тревожных входов.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byAlarmOutPortNum">
+            <summary>
+            Количество тревожных выходов.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byDiskNum">
+            <summary>
+            Количество жестких дисков.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byDVRType">
+            <summary>
+            Тип устройства.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byChanNum">
+            <summary>
+            Количество аналоговых каналов.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byStartChan">
+            <summary>
+            Номер начального канала, начинается с 1.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byAudioChanNum">
+            <summary>
+            Количество двусторонних аудиоканалов.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byIPChanNum">
+            <summary>
+            Максимальное количество цифровых каналов.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byZeroChanNum">
+            <summary>
+            Количество нулевых каналов.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byMainProto">
+            <summary>
+            Тип протокола передачи основного потока: 0 - частный, 1 - RTSP, 2 - частный и RTSP.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.bySubProto">
+            <summary>
+            Тип протокола передачи подпотока: 0 - частный, 1 - RTSP, 2 - частный и RTSP.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.bySupport">
+            <summary>
+            Поддерживаемые режимы:
+            0 - не поддерживает.
+            0x1: поддерживает ли он интеллектуальный поиск.
+            0x2: поддерживает ли он резервное копирование.
+            0x4: поддерживает ли он возможность получения параметров сжатия.
+            0x8: поддерживает ли он мульти-сетевую карту.
+            0x10: поддерживает ли он SADP.
+            0x20: поддерживает ли он карту RAID.
+            0x40: будь то IP SAN поиск контента.
+            0x80: поддерживает ли он RTP поверх RTSP.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.bySupport1">
+            <summary>
+            Расширенный набор возможностей:
+            0 - не поддерживает.
+            0x1, поддерживает ли он SNMP v30.
+            0x2, поддерживает ли он различать воспроизведение и загрузку.
+            0x4, поддерживает ли он приоритет постановки на охрану.
+            0x8, поддерживает ли он увеличение периода постановки на охрану.
+            0x10, поддерживает ли он несколько дисков (более 33).
+            0x20, поддерживает ли он протокол RTSP через HTTP.
+            0x40, поддерживает ли он задержку просмотра в реальном времени.
+            0x80, поддерживает ли он новый тип информации о тревогах для интеллектуальной камеры слежения, он также указывает, поддерживать ли конфигурацию NET_DVR_IPPARACFG_V40.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.bySupport2">
+            <summary>
+            Расширенный набор возможностей (Это поле не поддерживается при входе по протоколу ISAPI):
+            0 - не поддерживает.
+            0x1, поддерживает ли декодер получение потока по URL.
+            0x2, поддерживает FTPV40. 
+            0x4, поддержка ANR.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.wDevType">
+            <summary>
+            Тип устройств.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.bySupport3">
+            <summary>
+            Расширенный набор возможностей (Это поле не поддерживается при входе по протоколу ISAPI):
+            0 - не поддерживает.
+            0x1: поддерживает ли он многопоточность.
+            0x4: поддерживает ли он конфигурацию по группам, включая: параметры изображения каналов, вход тревоги, доступ к входу / выходу тревоги IP, 
+            пользовательские параметры, состояние устройства, захват JPEG, синхронизация и захват по времени, управление группами HDD и т. д.
+            0x20: поддерживает ли он получение потока по DDNS.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byMultiStreamProto">
+            <summary>
+            Поддерживает ли многопотоковый режим:
+            0 - не поддерживается.
+            1 - поддерживает, бит 1 - поток 3, бит 2 - поток 4, бит 7 - основной поток, бит 8 - подпоток.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byStartDChan">
+            <summary>
+            Начальный номер цифрового канала, 0 недействителен.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byStartDTalkChan">
+            <summary>
+            Запустить цифровой двусторонний аудиоканал №, 0-недействительный.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byHighDChanNum">
+            <summary>
+            Количество цифровых каналов, старшие биты действительны.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.bySupport4">
+            <summary>
+            Поддерживаемые режимы:
+            0 - не поддерживает.
+            0x1: поддерживает ли он все типы потоков, RTSP, частный протокол.
+            0x10: поддерживает ли он монтирование сетевого жесткого диска по имени домена.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byLanguageType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byVoiceInChanNum">
+            <summary>
+            Количество каналов ввода звука.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byStartVoiceInChanNo">
+            <summary>
+            Начать ввод аудиоканала №, 0-недействительный.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.bySupport5">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.bySupport6">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byMirrorChanNum">
+            <summary>
+            Количество зеркальных каналов.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.wStartMirrorChanNo">
+            <summary>
+            Начать зеркальный канал №
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.bySupport7">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.DeviceInfo.byRes2">
+            <summary>
+            Зарезервировано, установлено в 0.
+            </summary>
+        </member>
+        <member name="T:HikvisionLibrary.JpegParameters">
+            <summary>
+            Структура информации об изображении в формате JPEG.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.JpegParameters.wPicSize">
+            <summary>
+            Размер изображения: 
+            0-CIF (352 * 288/352 * 240), 1-QCIF (176 * 144/176 * 120), 2-4CIF (704 * 576/704 * 480) или D1 (720 * 576/720). * 486), 3-UXGA (1600 * 1200), 4-SVGA (800 * 600), 
+            5-HD720P (1280 * 720), 6-VGA (640 * 480), 7-XVGA (1280 * 960), 8 -HD900P (1600 * 900), 9-HD1080P (1920 * 1080), 10-2560 * 1920, 11-1600 * 304, 12-2048 * 1536, 
+            13-2448 * 2048, 14-2448 * 1200, 15-2448 * 800, 16-XGA (1024 * 768), 17-SXGA (1280 * 1024), 18-WD1 (960 * 576/960 * 480), 19-1080I (1920 * 1080), 20-576 * 576, 
+            21 -1536 * 1536, 22-1920 * 1920, 23-320 * 240, 24-720 * 720, 25-1024 * 768, 26-1280 * 1280, 27-1600 * 600, 28-2048 * 768, 29-160 * 120, 75-336 * 256, 78-384 * 256, 
+            79-384 * 216, 80-320 * 256, 82-320 * 192, 83-512 * 384, 127-480 * 272, 128-512 * 272 , 161-288 * 320, 162-144 * 176, 163-480 * 640, 164-240 * 320, 165-120 * 160, 
+            166-576 * 720, 167-720 * 1280, 168-576 * 960, 180 -180 * 240, 181-360 * 480, 182-540 * 720, 183-720 * 960, 184-960 * 1280, 185-1080 * 1440, 500-384 * 288, 
+            0xff-Auto (использовать текущее разрешение потока)
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.JpegParameters.wPicQuality">
+            <summary>
+            Качество изображения:
+            0 - лучшее, 1 - лучше, 2 - среднее
+            </summary>
+        </member>
+        <member name="T:HikvisionLibrary.PreviewInfo">
+            <summary>
+            Структура параметров предварительного просмотра.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.PreviewInfo.lChannel">
+            <summary>
+            Номер аналогового канала начинается с 1, начальный номер IP-канала.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.PreviewInfo.dwStreamType">
+            <summary>
+            Тип потока: 0-основной поток, 1-дополнительный поток, 2-поток 3, 3-виртуальный поток и т. Д.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.PreviewInfo.dwLinkMode">
+            <summary>
+            Режим соединения: 0-TCP, 1-UDP, 2-многоадресная, 3-RTP, 4-RTP / RTSP, 5-RSTP / HTTP, 6-HRUDP.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.PreviewInfo.hPlayWnd">
+            <summary>
+            Дескриптор воспроизведения, NULL - без декодирования и отображения.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.PreviewInfo.bBlocked">
+            <summary>
+            0 - получение неблокирующего потока, 1 - получение блокирующего потока. если это блок, то в случае сбоя соединения в SDK будет возвращаться тайм-аут 5 с, 
+            это не подходит для получения потока запроса.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.PreviewInfo.bPassbackRecord">
+            <summary>
+            0 - отключить передачу видео, 1 - включить передачу видео. обратное отслеживание, когда ANR отключен - устройства отправляют данные автоматически после 
+            восстановления сети между клиентом и устройствами (требуется поддержка устройств).
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.PreviewInfo.byPreviewMode">
+            <summary>
+            Режим предварительного просмотра: 0 - обычный предварительный просмотр, 1 - предварительный просмотр с задержкой.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.PreviewInfo.byStreamID">
+            <summary>
+            Идентификатор потока, комбинация буквы, числа и '_', включить параметр, когда lChannel = 0xffffffff.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.PreviewInfo.byProtoType">
+            <summary>
+            Протокол прикладного уровня: 0 - частный протокол, 1 - RTSP. Протокол, поддерживаемый основным потоком, получается от MainProto, SubProto из NET_DVR_DEVICEINFO_V30. 
+            Параметр действителен, когда устройства поддерживают приватный и RTSP одновременно. По умолчанию приватный (RTSP необязательно)
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.PreviewInfo.byRes1">
+            <summary>
+            Зарезервировано, пожалуйста, установите его на 0.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.PreviewInfo.byVideoCodingType">
+            <summary>
+            Тип кодирования видео: 0- Общие данные кодирования, 1- Исходные данные, сгенерированные термодетектором (зашифрованные данные о температуре, 
+            вы можете получить фактическую температуру с помощью арифметики шифрования)
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.PreviewInfo.dwDisplayBufNum">
+            <summary>
+            Максимальное количество кадров в буфере SDK плеера, диапазон значений: 1, 6 (по умолчанию, режим самоадаптации), 15. Значение 1 при установке на 0.
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.PreviewInfo.byRes">
+            <summary>
+            Зарезервировано.
+            </summary>
+        </member>
+        <member name="T:HikvisionLibrary.HikvisionCamera">
+            <summary>
+            Класс для работы с видеокамерой Hikvision
+            </summary>
+        </member>
+        <member name="F:HikvisionLibrary.HikvisionCamera.MessageForUser">
+            <summary>
+            Метод передачи сообщения пользователю.
+            </summary>
+        </member>
+        <member name="T:HikvisionLibrary.HikvisionCamera.REALDATACALLBACK">
+            <summary>
+            Делегат функции обратного вызова получения потока данных.
+            </summary>
+            <param name="realHandle">Дескриптор потока данных</param>
+            <param name="dataType">Тип данных.</param>
+            <param name="buffer">Буфер данных.</param>
+            <param name="bufSize">Размер буфера данных.</param>
+            <param name="userHandle">Дескриптор пользователя</param>
+        </member>
+        <member name="M:HikvisionLibrary.HikvisionCamera.Initialisation">
+            <summary>
+            Инициализация библиотеки.
+            </summary>
+            <returns>Указывает. удачно ли произведена инициализация.</returns>
+        </member>
+        <member name="M:HikvisionLibrary.HikvisionCamera.Cleanup">
+            <summary>
+            Отключение от библиотеки.
+            </summary>
+            <returns>Указывает, удачно ли произведено отключение.</returns>
+        </member>
+        <member name="M:HikvisionLibrary.HikvisionCamera.Login(System.String,System.Int32,System.String,System.String,HikvisionLibrary.DeviceInfo@)">
+            <summary>
+            Вход пользователя для устройства.
+            </summary>
+            <param name="address">IP-адрес или статическое доменное имя устройства, количество символов должно быть не более 128.</param>
+            <param name="portNumber">Порт №. устройства.</param>
+            <param name="userName">Имя пользователя.</param>
+            <param name="password">Пароль.</param>
+            <param name="deviceInfo">Информация об устройстве.</param>
+            <returns>Возвращает -1, если вход не удался, а другое значение - это значение возвращенного идентификатора пользователя. 
+            Идентификатор пользователя является уникальным, и следующие операции должны осуществляться через этот идентификатор.</returns>
+        </member>
+        <member name="M:HikvisionLibrary.HikvisionCamera.Logout(System.Int32)">
+            <summary>
+            Отключение пользователя от устройства.
+            </summary>
+            <param name="userID">Идентификатор пользователя.</param>
+            <returns>Указывает, удачно ли произведено отключение пользователя.</returns>
+        </member>
+        <member name="M:HikvisionLibrary.HikvisionCamera.StartRealPlay(System.Int32,HikvisionLibrary.PreviewInfo@,HikvisionLibrary.HikvisionCamera.REALDATACALLBACK,System.IntPtr)">
+            <summary>
+            Начать просмотр в реальном времени. (используется для устройства, чтобы получить поток напрямую через URL ISAPI).
+            </summary>
+            <param name="userID">Уникальный идентификатор пользователя.</param>
+            <param name="previewInfo">Параметры предварительного просмотра.</param>
+            <param name="realDataCallBack">Функция обратного вызова потока данных</param>
+            <param name="userHandle">Дескриптор пользователя.</param>
+            <returns>Дескриптор устройства потокового просмотра.</returns>
+        </member>
+        <member name="M:HikvisionLibrary.HikvisionCamera.StopRealPlay(System.Int32)">
+            <summary>
+            Останавливает просмотр в реальном времени.
+            </summary>
+            <param name="realHandle">Дескриптор устройства потокового просмотра.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HikvisionLibrary.HikvisionCamera.GetLastError">
+            <summary>
+            Получает код последней ошибки.
+            </summary>
+            <returns>Код последней ошибки.</returns>
+        </member>
+        <member name="M:HikvisionLibrary.HikvisionCamera.SaveBmpPicture(System.Int32,System.String)">
+            <summary>
+            Сохранить изображение из потокового видео в формате BMP.
+            </summary>
+            <param name="realHandle">Дескриптор устройства потокового просмотра.</param>
+            <param name="fileName">Путь и имя для сохранения файла.</param>
+            <returns>Указывает, удалось ли сохранить изображение.</returns>
+        </member>
+        <member name="M:HikvisionLibrary.HikvisionCamera.SaveJpegPicture(System.Int32,System.Int32,HikvisionLibrary.JpegParameters@,System.String)">
+            <summary>
+            Сохранить изображение из потокового видео в формате JPEG.
+            </summary>
+            <param name="userID">Уникальный идентификатор пользователя.</param>
+            <param name="channel">Номер канала.</param>
+            <param name="jpegParameters">Структура информации об изображении в формате JPEG.</param>
+            <param name="fileName">Путь и имя для сохранения файла.</param>
+            <returns>Указывает, удалось ли сохранить изображение.</returns>
+        </member>
+        <member name="M:HikvisionLibrary.HikvisionCamera.MakeKeyFrame(System.Int32,System.Int32)">
+            <summary>
+            Создание ключевого кадра в основном потоке.
+            </summary>
+            <param name="userID">Уникальный идентификатор пользователя.</param>
+            <param name="channel">Номер канала.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HikvisionLibrary.HikvisionCamera.MakeKeyFrameSub(System.Int32,System.Int32)">
+            <summary>
+            Создание ключевого кадра в основном подпотоке.
+            </summary>
+            <param name="userID">Уникальный идентификатор пользователя.</param>
+            <param name="channel">Номер канала.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HikvisionLibrary.HikvisionCamera.StartSaveVideo(System.Int32,System.String)">
+            <summary>
+            Начинает запись видеопотока в указанный файл.
+            </summary>
+            <param name="realHandle">Дескриптор устройства потокового просмотра.</param>
+            <param name="fileName">Путь и имя для сохранения файла.</param>
+            <returns>Указывает, удалось ли начать запись видео.</returns>
+        </member>
+        <member name="M:HikvisionLibrary.HikvisionCamera.StopSaveVideo(System.Int32)">
+            <summary>
+            Прекращает запись видеопотока.
+            </summary>
+            <param name="realHandle">Дескриптор устройства потокового просмотра.</param>
+            <returns>Указывает, удалось ли закончиться запись видео.</returns>
+        </member>
+    </members>
+</doc>

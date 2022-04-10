@@ -1,0 +1,7 @@
+D:\Programming\Projects\VS_2019\Recognition\HikvisionLibrary\bin\x64\Debug\HikvisionLibrary.xml
+D:\Programming\Projects\VS_2019\Recognition\HikvisionLibrary\bin\x64\Debug\HikvisionLibrary.dll
+D:\Programming\Projects\VS_2019\Recognition\HikvisionLibrary\bin\x64\Debug\HikvisionLibrary.pdb
+D:\Programming\Projects\VS_2019\Recognition\HikvisionLibrary\obj\x64\Debug\HikvisionLibrary.dll
+D:\Programming\Projects\VS_2019\Recognition\HikvisionLibrary\obj\x64\Debug\HikvisionLibrary.pdb
+D:\Programming\Projects\VS_2019\Recognition\HikvisionLibrary\obj\x64\Debug\HikvisionLibrary.csproj.CoreCompileInputs.cache
+D:\Programming\Projects\VS_2019\Recognition\HikvisionLibrary\obj\x64\Debug\HikvisionLibrary.csproj.AssemblyReference.cache

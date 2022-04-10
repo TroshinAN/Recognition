@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SettingCameras xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <isUseMainPort isChecked="false">
+    <Value />
+  </isUseMainPort>
+  <isUseMainLogin isChecked="false">
+    <Value />
+  </isUseMainLogin>
+  <isUseMainPassword isChecked="false">
+    <Value />
+  </isUseMainPassword>
+  <isUseMainCameraFrameCount isChecked="true">
+    <Value>4</Value>
+  </isUseMainCameraFrameCount>
+  <isUseMainTimeBetweenFrame isChecked="true">
+    <Value>50</Value>
+  </isUseMainTimeBetweenFrame>
+  <isUseMainHeigthWordPercent isChecked="false">
+    <Value>15</Value>
+  </isUseMainHeigthWordPercent>
+  <Cameras ID="1" IsUsed="true">
+    <Name>Камера 1</Name>
+    <Address />
+    <Port>8080</Port>
+    <Login />
+    <Password />
+    <Frame>
+      <Count>4</Count>
+      <TimeBetweenFrame>50</TimeBetweenFrame>
+      <HeigthWordPercent>15</HeigthWordPercent>
+    </Frame>
+  </Cameras>
+  <Cameras ID="2" IsUsed="true">
+    <Name>Камера 2</Name>
+    <Address />
+    <Port>8080</Port>
+    <Login />
+    <Password />
+    <Frame>
+      <Count>4</Count>
+      <TimeBetweenFrame>50</TimeBetweenFrame>
+      <HeigthWordPercent>10</HeigthWordPercent>
+    </Frame>
+  </Cameras>
+  <Cameras ID="3" IsUsed="false">
+    <Name>Камера 3</Name>
+    <Address />
+    <Port />
+    <Login />
+    <Password />
+    <Frame>
+      <Count>4</Count>
+      <TimeBetweenFrame>50</TimeBetweenFrame>
+      <HeigthWordPercent>5</HeigthWordPercent>
+    </Frame>
+  </Cameras>
+  <Cameras ID="4" IsUsed="false">
+    <Name>Камера 4</Name>
+    <Address />
+    <Port />
+    <Login />
+    <Password />
+    <Frame>
+      <Count>4</Count>
+      <TimeBetweenFrame>50</TimeBetweenFrame>
+      <HeigthWordPercent>5</HeigthWordPercent>
+    </Frame>
+  </Cameras>
+</SettingCameras>

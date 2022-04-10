@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SettingCameras xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <isUseMainPort isChecked="false">
+    <Value />
+  </isUseMainPort>
+  <isUseMainLogin isChecked="false">
+    <Value />
+  </isUseMainLogin>
+  <isUseMainPassword isChecked="false">
+    <Value />
+  </isUseMainPassword>
+  <isUseMainCameraFrameCount isChecked="false">
+    <Value />
+  </isUseMainCameraFrameCount>
+  <isUseMainTimeBetweenFrame isChecked="false">
+    <Value />
+  </isUseMainTimeBetweenFrame>
+  <isUseMainHeigthWordPercent isChecked="false">
+    <Value />
+  </isUseMainHeigthWordPercent>
+  <Cameras ID="1" IsUsed="true">
+    <Name>Камера 1</Name>
+    <Address>world-cam.ru/3103d399-9d0a-4677-af7c-df38f21bc396</Address>
+    <Port>8080</Port>
+    <Login />
+    <Password />
+    <Frame>
+      <Count>1</Count>
+      <TimeBetweenFrame>100</TimeBetweenFrame>
+      <HeigthWordPercent>15</HeigthWordPercent>
+    </Frame>
+  </Cameras>
+  <Cameras ID="2" IsUsed="false">
+    <Name>Камера 2</Name>
+    <Address />
+    <Port />
+    <Login />
+    <Password />
+    <Frame>
+      <Count>1</Count>
+      <TimeBetweenFrame>100</TimeBetweenFrame>
+      <HeigthWordPercent>15</HeigthWordPercent>
+    </Frame>
+  </Cameras>
+  <Cameras ID="3" IsUsed="false">
+    <Name>Камера 3</Name>
+    <Address />
+    <Port />
+    <Login />
+    <Password />
+    <Frame>
+      <Count>1</Count>
+      <TimeBetweenFrame>100</TimeBetweenFrame>
+      <HeigthWordPercent>15</HeigthWordPercent>
+    </Frame>
+  </Cameras>
+  <Cameras ID="4" IsUsed="false">
+    <Name>Камера 4</Name>
+    <Address />
+    <Port />
+    <Login />
+    <Password />
+    <Frame>
+      <Count>1</Count>
+      <TimeBetweenFrame>100</TimeBetweenFrame>
+      <HeigthWordPercent>15</HeigthWordPercent>
+    </Frame>
+  </Cameras>
+</SettingCameras>
